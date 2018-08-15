@@ -5,7 +5,7 @@ class Jpcre2 < Formula
   sha256 "7228059ea1c72d9d4ff340c417bb4715dcbce23f79c6ed370bd3d1761826ef4a"
   # depends_on "cmake" => :build
   depends_on "pcre2"
-  version "10.31.02"
+  version "10.31.02-1"
 
   def install
     system "./configure", "--disable-debug",
