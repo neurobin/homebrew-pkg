@@ -31,6 +31,6 @@ class Jpcre2 < Formula
     EOS
     system ENV.cxx, test_cpp_file, "-std=c++1y", "-lpcre2-8", "-o", "test"
     output = shell_output("./test").strip()
-    assert_match "9", output
+    assert_equal "9", output
   end
 end
