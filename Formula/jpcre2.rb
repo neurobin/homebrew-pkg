@@ -4,9 +4,6 @@ class Jpcre2 < Formula
   url "https://github.com/jpcre2/jpcre2/archive/10.31.02-1.tar.gz"
   sha256 "7228059ea1c72d9d4ff340c417bb4715dcbce23f79c6ed370bd3d1761826ef4a"
   # depends_on "cmake" => :build
-  depends_on :autoconf => :build
-  depends_on :automake => :build
-  depends_on :libtool => :build
   depends_on :pcre2 => :cxx
 
   def install
