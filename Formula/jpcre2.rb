@@ -3,7 +3,6 @@ class Jpcre2 < Formula
   homepage "http://docs.neurobin.org/jpcre2"
   url "https://github.com/jpcre2/jpcre2/archive/10.31.02-1.tar.gz"
   sha256 "7228059ea1c72d9d4ff340c417bb4715dcbce23f79c6ed370bd3d1761826ef4a"
-  # depends_on "cmake" => :build
   depends_on "pcre2"
   version "10.31.02-1"
 
@@ -12,9 +11,8 @@ class Jpcre2 < Formula
                           "--disable-dependency-tracking",
                           #"--disable-silent-rules",
                           "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
     system "make"
-    system "make", "install" # if this fails, try separate make/make install steps
+    system "make", "install"
   end
 
   test do
