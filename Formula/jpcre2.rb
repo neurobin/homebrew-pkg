@@ -29,7 +29,7 @@ class Jpcre2 < Formula
             return 0;
         }
     EOS
-    system ENV.cxx, "test.cpp", "-std=c++1y", "-L#{lib}", "-lpcre2-8", "-o", "test"
+    system ENV.cxx, test_cpp_file, "-std=c++1y", "-L#{lib}", "-lpcre2-8", "-o", "test"
     output = shell_output("test").strip()
     assert_match "9", output
   end
