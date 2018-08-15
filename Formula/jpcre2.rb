@@ -25,12 +25,12 @@ class Jpcre2 < Formula
         typedef jpcre2::select<char> jp;
         
         int main(){
-            std::cout<<jp::Regex("\\d").match("123456789", "g"); //will print 9
+            std::cout<<jp::Regex("\\\\d").match("123456789", "g"); //will print 9
             return 0;
         }
     EOS
-    system ENV.cxx, test_cpp_file, "-std=c++1y", "-L#{lib}", "-lpcre2-8", "-o", "test"
-    output = shell_output("test").strip()
+    system ENV.cxx, test_cpp_file, "-std=c++1y", "-lpcre2-8", "-o", "test"
+    output = shell_output("./test").strip()
     assert_match "9", output
   end
 end
