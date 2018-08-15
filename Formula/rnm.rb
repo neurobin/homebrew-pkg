@@ -18,8 +18,8 @@ class Rnm < Formula
   end
 
   test do
-    shell_output("for f in $(seq 1 4000); do touch $f; done")
-    output = shell_output("#{bin}/rnm -y -rs '//fn///fn/@ B16: /idr-b16/ L: /idr-l/ S: /idr-s/ mtime:/info-mtime-%d-%m-%Y %H:%I %p//' -fo -dp -1 -s ./*").strip
+    shell_output("mkdir testdir; for f in $(seq 1 4000); do touch testdir/$f; done")
+    output = shell_output("#{bin}/rnm -y -rs '//fn///fn/@ B16: /idr-b16/ L: /idr-l/ S: /idr-s/ mtime:/info-mtime-%d-%m-%Y %H:%I %p//' -fo -dp -1 -s ./testdir").strip
     assert_match "4000", output
   end
 end
