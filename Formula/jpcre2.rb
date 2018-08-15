@@ -5,6 +5,7 @@ class Jpcre2 < Formula
   sha256 "7228059ea1c72d9d4ff340c417bb4715dcbce23f79c6ed370bd3d1761826ef4a"
   # depends_on "cmake" => :build
   depends_on "pcre2"
+  version "10.31.02"
 
   def install
     system "./configure", "--disable-debug",
@@ -17,15 +18,19 @@ class Jpcre2 < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test jpcre2`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "true"
+    test_cpp_file = testpath/"test.cpp"
+    test_cpp_file.write <<~EOS
+        #include <iostream>
+        #include "jpcre2.hpp"
+        typedef jpcre2::select<char> jp;
+        
+        int main(){
+            std::cout<<jp::Regex("\\d").match("123456789", "g"); //will print 9
+            return 0;
+        }
+    EOS
+    system ENV.cxx, "test.cpp", "-std=c++1y", "-L#{lib}", "-lpcre2-8", "-o", "test"
+    output = shell_output("test").strip()
+    assert_match "9", output
   end
 end
