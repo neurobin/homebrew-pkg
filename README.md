@@ -1,4 +1,4 @@
-# `neurobin/pkg`
+# neurobin/pkg
 
 
 ## Install a package:
