@@ -1,4 +1,8 @@
-# Tap: `brew tap neurobin/pkg`
+`neurobin/pkg`
+--------------
 
-# Install: `brew install neurobin/pkg/<package-name>`
+## Install a package:
 
+```bash
+brew install neurobin/pkg/<package-name>
+```
