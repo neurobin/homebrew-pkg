@@ -13,5 +13,5 @@ brew install neurobin/pkg/<package-name>
 To create a formula, you can do:
 
 ```
-brew create https://github.com/neurobin/shc/archive/<version>.tar.gz
+brew create <URL>
 ```
