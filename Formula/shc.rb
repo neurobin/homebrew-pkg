@@ -1,9 +1,9 @@
 class Shc < Formula
   desc "Shell script compiler"
   homepage "https://neurobin.org/projects/softwares/unix/shc/"
-  url "https://github.com/neurobin/shc/archive/3.9.8.tar.gz"
-  version "3.9.8"
-  sha256 "8b31e1f2ceef3404217b9578fa250a8a424f3eaf03359dd7951cd635c889ad79"
+  url "https://github.com/neurobin/shc/archive/4.0.0.tar.gz"
+  version "4.0.0"
+  sha256 "750f84441c45bd589acc3b0f0f71363b0001818156be035da048e1c2f8d6d76b"
 
   def install
     system "./configure", "--disable-debug",
