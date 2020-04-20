@@ -14,7 +14,7 @@ class Rnm < Formula
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
-                          "CXX=g++",
+                          "CXX=g++"
                           
     system "make"
     system "make", "install"
