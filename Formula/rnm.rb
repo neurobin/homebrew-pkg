@@ -5,9 +5,9 @@ class Rnm < Formula
   version "4.0.7"
   sha256 "3e95d00cbb84a505cec5706abb946fc19412985ff1ece9b453db53dea8d77a9f"
   depends_on "gcc"
+  depends_on "pcre2"
   depends_on "jpcre2" => :build
   depends_on "gmp"
-  depends_on "pcre2"
 
   def install
     ENV.cxx11
