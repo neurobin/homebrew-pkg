@@ -4,6 +4,7 @@ class Rnm < Formula
   url "https://github.com/neurobin/rnm/archive/4.0.7.tar.gz"
   version "4.0.7"
   sha256 "3e95d00cbb84a505cec5706abb946fc19412985ff1ece9b453db53dea8d77a9f"
+  depends_on "gcc"
   depends_on "jpcre2" => :build
   depends_on "gmp"
   depends_on "pcre2"
@@ -12,7 +13,9 @@ class Rnm < Formula
     ENV.cxx11
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "CXX=g++"
+                          
     system "make"
     system "make", "install"
   end
