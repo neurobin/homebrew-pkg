@@ -3,7 +3,7 @@ class Rnm < Formula
   homepage "https://neurobin.org/projects/softwares/unix/rnm/"
   url "https://github.com/neurobin/rnm/archive/4.0.8.tar.gz"
   version "4.0.8"
-  sha256 "26b4aeba23d26dfca9a3aa9e3b3ef215864b9ce8d5470d1afeeacced06493405"
+  sha256 "e89e090ce575dc4942e4617092032be75df52402c2e5a1dbebd272e8bdf7e6cb"
   depends_on "jpcre2" => :build
   depends_on "gmp"
 
