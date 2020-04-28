@@ -2,7 +2,7 @@ class Rnm < Formula
   desc "Unix tool: Bulk Rename Utility"
   homepage "https://neurobin.org/projects/softwares/unix/rnm/"
   url "https://github.com/neurobin/rnm/archive/4.0.8.tar.gz"
-  version "4.0.7"
+  version "4.0.8"
   sha256 "26b4aeba23d26dfca9a3aa9e3b3ef215864b9ce8d5470d1afeeacced06493405"
   depends_on "jpcre2" => :build
   depends_on "gmp"
