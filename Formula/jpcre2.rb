@@ -2,7 +2,7 @@ class Jpcre2 < Formula
   desc "C++ wrapper for PCRE2 Library"
   homepage "http://docs.neurobin.org/jpcre2"
   url "https://github.com/jpcre2/jpcre2/archive/10.32.01.tar.gz"
-  sha256 "e8c69a6a6f77ed8d5c35dcdfa767b155f5230a83f55d35cab837b6f0a1266ca8"
+  sha256 "668cbc6d2c0a065bb6abe8494d5a1bb3549a14cd956a44a2df9095045623ea47"
   depends_on "pcre2"
   version "10.32.01"
 
